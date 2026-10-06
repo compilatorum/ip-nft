@@ -1,0 +1,13 @@
+# Temporary & Scratch Files
+scratch_*.json
+pdf_full_text.txt
+*.log
+
+# Dependencies & Environment
+node_modules/
+.env
+.env.local
+
+# OS Files
+.DS_Store
+Thumbs.db
