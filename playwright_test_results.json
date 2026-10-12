@@ -1,0 +1,159 @@
+{
+  "timestamp": "2026-10-12T12:55:33Z",
+  "target_url": "https://www.valuecurator.xyz",
+  "browser": "Chromium 146.0 (Termux Headless Engine)",
+  "suites": {
+    "1. Inicializa\u00e7\u00e3o, Metadados & Carregamento": [
+      {
+        "test": "HTTP 200 Status OK",
+        "status": "PASSED",
+        "details": {
+          "status": 200,
+          "load_time_ms": 10267
+        }
+      },
+      {
+        "test": "Verifica\u00e7\u00e3o do Page Title",
+        "status": "PASSED",
+        "details": {
+          "title": "ValueCurator \u00b7 Guarded execution for tokenized assets"
+        }
+      },
+      {
+        "test": "Presen\u00e7a de Headings Institucionais",
+        "status": "FAILED",
+        "details": {}
+      }
+    ],
+    "2. Tab 01: Overview & Ativos Verificados": [
+      {
+        "test": "Identifica\u00e7\u00e3o de Ativo RWA (AAPLx Tokenized Equity)",
+        "status": "PASSED",
+        "details": {
+          "detected": true
+        }
+      },
+      {
+        "test": "Identifica\u00e7\u00e3o de Or\u00e1culo Pyth Feed 922",
+        "status": "PASSED",
+        "details": {
+          "detected": true
+        }
+      },
+      {
+        "test": "Demarca\u00e7\u00e3o Expl\u00edcita de Redes (Devnet Custody vs Mainnet Market)",
+        "status": "PASSED",
+        "details": {
+          "detected": true
+        }
+      },
+      {
+        "test": "Conta de Tesouraria de Infraestrutura Conectada",
+        "status": "FAILED",
+        "details": {}
+      }
+    ],
+    "3. Tab 02: Construtor de Mandatos (Mandate Builder)": [
+      {
+        "test": "Navega\u00e7\u00e3o Interativa para Tab Mandato",
+        "status": "PASSED",
+        "details": {}
+      },
+      {
+        "test": "Sub-navega\u00e7\u00e3o Modular do Mandato (Ativos, Risco, Simula\u00e7\u00e3o, Exporta\u00e7\u00e3o)",
+        "status": "PASSED",
+        "details": {
+          "asset": true,
+          "risk": true,
+          "sim": true,
+          "review": true
+        }
+      },
+      {
+        "test": "Exibi\u00e7\u00e3o de Limites Param\u00e9tricos de Risco (Trade, BPS, Slippage)",
+        "status": "PASSED",
+        "details": {}
+      }
+    ],
+    "4. Tab 03: Port\u00e3o de Pol\u00edtica & Avalia\u00e7\u00e3o Determin\u00edstica": [
+      {
+        "test": "Navega\u00e7\u00e3o Interativa para Tab Gate",
+        "status": "PASSED",
+        "details": {}
+      },
+      {
+        "test": "Cen\u00e1rio 1: Proposta V\u00e1lida -> Emiss\u00e3o de Recibo APPROVED",
+        "status": "PASSED",
+        "details": {}
+      },
+      {
+        "test": "Cen\u00e1rio 2: Or\u00e1culo Obsoleto -> Interrup\u00e7\u00e3o com Rejei\u00e7\u00e3o por Idade",
+        "status": "PASSED",
+        "details": {}
+      },
+      {
+        "test": "Cen\u00e1rio 3: Desvio de Cota\u00e7\u00e3o Excessivo -> Interrup\u00e7\u00e3o por Diverg\u00eancia",
+        "status": "PASSED",
+        "details": {}
+      },
+      {
+        "test": "Disponibilidade de Exporta\u00e7\u00e3o Audit\u00e1vel em Formato JSON",
+        "status": "PASSED",
+        "details": {}
+      }
+    ],
+    "5. Tab 04: Auditoria Criptogr\u00e1fica & Transa\u00e7\u00f5es Devnet": [
+      {
+        "test": "Navega\u00e7\u00e3o Interativa para Tab Audit",
+        "status": "PASSED",
+        "details": {}
+      },
+      {
+        "test": "Exibi\u00e7\u00e3o de Transa\u00e7\u00e3o Confirmada na Solana (metabolize_yield)",
+        "status": "PASSED",
+        "details": {}
+      },
+      {
+        "test": "Bot\u00e3o de Exporta\u00e7\u00e3o do Relat\u00f3rio Criptogr\u00e1fico Final",
+        "status": "PASSED",
+        "details": {}
+      }
+    ],
+    "6. Rota de Customer Discovery (/interview)": [
+      {
+        "test": "Disponibilidade da Rota /interview em Produ\u00e7\u00e3o",
+        "status": "FAILED",
+        "details": {
+          "status": 404,
+          "diagnostic": "O servidor de produ\u00e7\u00e3o em valuecurator.xyz ainda n\u00e3o deployou o pacote apps/discovery-api e o componente discovery-interview.tsx presente no monorepo."
+        }
+      }
+    ],
+    "7. Auditoria de Console, Erros JS e Integridade de Rede": [
+      {
+        "test": "Aus\u00eancia de Erros N\u00e3o Capturados de Execu\u00e7\u00e3o JS",
+        "status": "PASSED",
+        "details": {
+          "page_errors": []
+        }
+      },
+      {
+        "test": "Carregamento \u00cdntegro de Recursos de Rede (Sem 404/CORS de Assets)",
+        "status": "PASSED",
+        "details": {
+          "failed_requests": []
+        }
+      }
+    ]
+  },
+  "console_logs": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "passed_tests": 18,
+  "failed_tests": 3
+}
