@@ -76,9 +76,10 @@ def postprocess_html(html_text: str, math_blocks, math_inlines, mermaid_blocks):
         html_text = html_text.replace(f'<p>&lt;!--MERMAID_BLOCK_{idx}--&gt;</p>', replacement)
         html_text = html_text.replace(f'&lt;!--MERMAID_BLOCK_{idx}--&gt;', replacement)
 
-    # Ensure major sections and diagrams 2 & 3 start on clean pages for maximum readability
+    # Ensure major sections, diagrams 2 & 3, and individual test steps start on clean pages for maximum readability
     html_text = re.sub(r'<h2>(.*?[§\d].*?)</h2>', r'<h2 style="page-break-before: always; break-before: always;">\1</h2>', html_text)
     html_text = re.sub(r'<h3>(.*?[Dd]iagrama [2345].*?)</h3>', r'<h3 style="page-break-before: always; break-before: always;">\1</h3>', html_text)
+    html_text = re.sub(r'<h3>(.*?[Pp]asso \d+.*?)</h3>', r'<h3 style="page-break-before: always; break-before: always;">\1</h3>', html_text)
 
     return html_text
 
@@ -250,6 +251,19 @@ def build_full_html(body_html: str, vendor_dir: str, title: str = "Relatório T�
       color: inherit;
       padding: 0;
       border: none;
+    }}
+
+    /* Screenshots & Images styling */
+    img {{
+      max-width: 95%;
+      height: auto;
+      display: block;
+      margin: 1.2em auto;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      page-break-inside: avoid;
+      break-inside: avoid;
     }}
 
     /* MathJax LaTeX styling */

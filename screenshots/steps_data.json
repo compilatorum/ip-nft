@@ -1,0 +1,72 @@
+[
+  {
+    "step": 1,
+    "title": "Passo 01: Inicialização da Aplicação & Tab Overview",
+    "file": "screenshots/step_01_tab_overview.png",
+    "action": "Acesso ao domínio principal https://www.valuecurator.xyz e inspeção da aba '01 Overview'.",
+    "observation": "Carregamento instantâneo do ativo AAPLx Tokenized Equity e leitura dos feeds oraculares Pyth 922 da Mainnet com custódia demarcada em Devnet."
+  },
+  {
+    "step": 2,
+    "title": "Passo 02: Abertura do Construtor de Mandatos (Mandate Builder)",
+    "file": "screenshots/step_02_click_mandate.png",
+    "action": "Clique na aba '02 Mandate' da barra de navegação superior.",
+    "observation": "Transição reativa para a interface modular de governança constitucional, exibindo a sequência de 4 etapas de parametrização."
+  },
+  {
+    "step": 3,
+    "title": "Passo 03: Parametrização dos Limites de Risco & Slippage",
+    "file": "screenshots/step_03_mandate_risk_limits.png",
+    "action": "Seleção do sub-passo 'Risk limits' dentro do Mandate Builder.",
+    "observation": "Apresentação dos parâmetros de teto de trade ($500 USDC), exposição diária, tolerância máxima de desvio oracular e slippage de mercado."
+  },
+  {
+    "step": 4,
+    "title": "Passo 04: Consolidação & Resumo do Mandato Constitucional",
+    "file": "screenshots/step_04_mandate_review.png",
+    "action": "Clique na etapa 'Review & export' para inspeção do resumo do mandato.",
+    "observation": "Geração do hash SHA-256 do mandato e visualização das restrições prontas para aplicação pelo autômato."
+  },
+  {
+    "step": 5,
+    "title": "Passo 05: Acesso ao Portão de Política (Policy Gate)",
+    "file": "screenshots/step_05_click_gate.png",
+    "action": "Clique na aba '03 Gate' para carregar a máquina de decisão determinística.",
+    "observation": "Painel de simulação carregado, pronto para testar propostas contra evidências ao vivo de oráculos e livros de ofertas."
+  },
+  {
+    "step": 6,
+    "title": "Passo 06: Cenário 1 — Emissão de Recibo Criptográfico APPROVED",
+    "file": "screenshots/step_06_gate_safe_approved.png",
+    "action": "Execução da proposta em conformidade total com o mandato.",
+    "observation": "O portão computa a conjunção de todas as regras e exibe a badge verde APPROVED com a assinatura Ed25519 e telemetria completa."
+  },
+  {
+    "step": 7,
+    "title": "Passo 07: Cenário 2 — Interrupção Fail-Closed por Oráculo Obsoleto",
+    "file": "screenshots/step_07_gate_stale_blocked.png",
+    "action": "Simulação de proposta com observação oracular com idade superior a 300 segundos.",
+    "observation": "O portão bloqueia a execução instantaneamente (BLOCKED: Stale Oracle), protegendo o cofre contra precificação defasada."
+  },
+  {
+    "step": 8,
+    "title": "Passo 08: Cenário 3 — Interrupção por Divergência Excessiva de Cotação",
+    "file": "screenshots/step_08_gate_divergence_blocked.png",
+    "action": "Simulação de proposta onde a cotação da DEX diverge mais de 20% do oráculo Pyth.",
+    "observation": "Bloqueio imediato (BLOCKED: Price Divergence), prevenindo a tesouraria contra arbitragens tóxicas e manipulação de liquidez."
+  },
+  {
+    "step": 9,
+    "title": "Passo 09: Disponibilidade de Exportação do Recibo JSON",
+    "file": "screenshots/step_09_gate_json_export.png",
+    "action": "Inspeção do mecanismo de exportação auditável do portão determinístico.",
+    "observation": "Exportação estruturada de todos os parâmetros para verificação de compliance off-chain e histórico criptográfico."
+  },
+  {
+    "step": 10,
+    "title": "Passo 10: Auditoria Criptográfica & Transações Confirmadas na Solana",
+    "file": "screenshots/step_10_click_audit.png",
+    "action": "Navegação para a aba '04 Audit' e verificação das transações on-chain.",
+    "observation": "Exibição das assinaturas de transação confirmadas na Solana Devnet (metabolize_yield e emergency_withdraw) com separação constitucional de autoridades."
+  }
+]
