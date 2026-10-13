@@ -1,0 +1,142 @@
+[
+  {
+    "item": 1,
+    "timestamp": "0:00 - 0:15",
+    "title": "Abertura Filosófica & Soberania de Capital",
+    "voiceover_en": "Welcome, Colosseum judges. Autonomous AI agents are beginning to trade on-chain markets. But greater intelligence doesn't answer the core question: who controls the capital?",
+    "voiceover_pt": "Bem-vindos, jurados da Colosseum. Agentes autônomos de IA estão começando a negociar em mercados on-chain. Mas maior inteligência não responde à pergunta central: quem controla o capital?",
+    "file": "screenshots_narration/narration_step_01.png",
+    "ui_action": "Carregamento da página inicial e foco no manifesto central do protocolo.",
+    "target_element": "Cabeçalho Soberano: ValueCurator Control Plane"
+  },
+  {
+    "item": 2,
+    "timestamp": "0:15 - 0:25",
+    "title": "Princípio da Separação Constitucional",
+    "voiceover_en": "Giving raw private keys to an autonomous agent creates an existential security flaw. We built ValueCurator around a fundamental principle: operational autonomy must not mean sovereignty over capital.",
+    "voiceover_pt": "Entregar chaves privadas a um agente autônomo cria uma falha de segurança existencial. Construímos o ValueCurator em torno de um princípio fundamental: autonomia operacional não deve significar soberania sobre o capital.",
+    "file": "screenshots_narration/narration_step_02.png",
+    "ui_action": "Destaque no pilar 'The protection' evidenciando a separação entre chave do dono e chave do operador.",
+    "target_element": "Card: The Protection · Limites Invioláveis de Custódia"
+  },
+  {
+    "item": 3,
+    "timestamp": "0:25 - 0:35",
+    "title": "Ativos RWA & Telemetria Pyth Mainnet",
+    "voiceover_en": "Here on our Overview tab, we monitor real-world tokenized equity like AAPLx. Our system reads live Pyth Feed 922 market evidence directly from Solana Mainnet, while all custody vaults remain strictly segregated on Solana Devnet.",
+    "voiceover_pt": "Aqui na aba Overview, monitoramos ações tokenizadas do mundo real como AAPLx. Nosso sistema lê evidências ao vivo do Pyth Feed 922 da Mainnet, enquanto os cofres permanecem segregados na Devnet.",
+    "file": "screenshots_narration/narration_step_03.png",
+    "ui_action": "Inspeção do card do ativo sintético AAPLx e telemetria do oráculo Pyth.",
+    "target_element": "Painel de RWA: AAPLx com Leitura do Oráculo Pyth 922"
+  },
+  {
+    "item": 4,
+    "timestamp": "0:35 - 0:50",
+    "title": "Abertura do Construtor de Mandatos (Mandate Builder)",
+    "voiceover_en": "Now, let's step into the Mandate Builder. Instead of soft natural-language prompts that agents can hallucinate or bypass, we convert investor policies into immutable mathematical invariants.",
+    "voiceover_pt": "Agora, entramos no Construtor de Mandatos. Em vez de prompts frágeis em linguagem natural que agentes podem burlar ou alucinar, convertemos políticas de investimento em invariantes matemáticos imutáveis.",
+    "file": "screenshots_narration/narration_step_04.png",
+    "ui_action": "Transição interativa para a aba '02 Mandate'.",
+    "target_element": "Navegação: Aba 02 Mandate Builder"
+  },
+  {
+    "item": 5,
+    "timestamp": "0:50 - 1:05",
+    "title": "Parametrização dos Limites de Risco e Slippage",
+    "voiceover_en": "Under Risk Limits, the treasury owner configures strict boundaries: a 500 USDC trade cap, cumulative daily volume ceilings, and exact thresholds for price staleness and slippage.",
+    "voiceover_pt": "Em Risk Limits, o dono da tesouraria define fronteiras estritas: teto de $500 USDC por trade, limites cumulativos diários e parâmetros exatos para desvio e idade do oráculo.",
+    "file": "screenshots_narration/narration_step_05.png",
+    "ui_action": "Seleção da sub-etapa 'Risk limits' e ajuste dos tetos financeiros de execução.",
+    "target_element": "Sub-aba: Risk Limits ($500 USDC Trade Cap)"
+  },
+  {
+    "item": 6,
+    "timestamp": "1:05 - 1:15",
+    "title": "Consolidação & Hash Criptográfico SHA-256",
+    "voiceover_en": "Reviewing the mandate commits a deterministic SHA-256 hash. The boundary is locked.",
+    "voiceover_pt": "Revisar o mandato comita um hash SHA-256 determinístico. A fronteira de risco está travada.",
+    "file": "screenshots_narration/narration_step_06.png",
+    "ui_action": "Clique na sub-etapa 'Review & export' e geração do hash imutável do mandato.",
+    "target_element": "Sub-aba: Review & Export (SHA-256 Commitment)"
+  },
+  {
+    "item": 7,
+    "timestamp": "1:15 - 1:25",
+    "title": "O Crivo do Portão Determinístico (Policy Gate)",
+    "voiceover_en": "Now, the heart of our protocol: the Deterministic Policy Gate. Before any transaction can touch the blockchain, the gate evaluates the proposed action against real-time market data.",
+    "voiceover_pt": "Agora, o coração do nosso protocolo: o Portão Determinístico de Políticas. Antes de qualquer transação tocar a blockchain, o portão avalia a ação proposta contra dados em tempo real de mercado.",
+    "file": "screenshots_narration/narration_step_07.png",
+    "ui_action": "Transição para a aba '03 Gate' onde as propostas são submetidas ao crivo matemático.",
+    "target_element": "Navegação: Aba 03 Gate (Policy Verification Engine)"
+  },
+  {
+    "item": 8,
+    "timestamp": "1:25 - 1:40",
+    "title": "Cenário 1 — Emissão do Recibo Criptográfico APPROVED",
+    "voiceover_en": "Watch Scenario 1: a safe proposal within all mandate limits. All rules pass. The gate displays APPROVED, emitting an Ed25519 cryptographic authorization receipt. The agent receives the permit, but never touches the private key.",
+    "voiceover_pt": "Observe o Cenário 1: uma proposta segura dentro de todos os limites. Todas as regras passam. O portão exibe APPROVED, emitindo um recibo Ed25519. O agente recebe a autorização, mas jamais toca na chave privada.",
+    "file": "screenshots_narration/narration_step_08.png",
+    "ui_action": "Clique no botão 'Safe · APPROVED' e verificação do recibo de autorização criptográfica.",
+    "target_element": "Botão de Simulação: Safe · APPROVED & Recibo Ed25519"
+  },
+  {
+    "item": 9,
+    "timestamp": "1:40 - 1:52",
+    "title": "Cenário 2 — Bloqueio Fail-Closed por Oráculo Obsoleto",
+    "voiceover_en": "Now, watch Scenario 2: we simulate a stale oracle observation older than 300 seconds. The system triggers an instant block: BLOCKED, Stale Oracle. Our engine is strictly Fail-Closed. When market data is uncertain, the vault refuses to trade.",
+    "voiceover_pt": "Agora, veja o Cenário 2: simulamos uma cotação oracular com mais de 300 segundos. O sistema bloqueia instantaneamente: BLOCKED, Stale Oracle. Nosso motor é estritamente Fail-Closed. Quando o dado é incerto, o cofre recusa a execução.",
+    "file": "screenshots_narration/narration_step_09.png",
+    "ui_action": "Clique em 'Block · stale price' com rejeição determinística.",
+    "target_element": "Botão de Simulação: Block · Stale Price & Veredito Fail-Closed"
+  },
+  {
+    "item": 10,
+    "timestamp": "1:52 - 2:00",
+    "title": "Cenário 3 — Proteção Contra Divergência Tóxica de Cotação",
+    "voiceover_en": "Next, Scenario 3: an execution route diverging 20% from Pyth benchmark pricing. Blocked immediately! Price Divergence. Capital is shielded from toxic arbitrage.",
+    "voiceover_pt": "Em seguida, Cenário 3: uma rota divergindo 20% do benchmark Pyth. Bloqueio imediato! Divergência de Preço. O capital é protegido contra arbitragem tóxica.",
+    "file": "screenshots_narration/narration_step_10.png",
+    "ui_action": "Clique em 'Block · divergence' demonstrando a proteção de liquidez.",
+    "target_element": "Botão de Simulação: Block · Divergence & Proteção Tóxica"
+  },
+  {
+    "item": 11,
+    "timestamp": "2:00 - 2:08",
+    "title": "Exportação & Auditoria Institucional em JSON",
+    "voiceover_en": "Every decision can be exported as an auditable JSON payload for off-chain institutional compliance.",
+    "voiceover_pt": "Toda decisão pode ser exportada como um payload JSON auditável para compliance institucional off-chain.",
+    "file": "screenshots_narration/narration_step_11.png",
+    "ui_action": "Clique no botão 'Show JSON' revelando os metadados de auditoria.",
+    "target_element": "Botão: Show JSON (Payload Estruturado Criptográfico)"
+  },
+  {
+    "item": 12,
+    "timestamp": "2:08 - 2:20",
+    "title": "Auditoria On-Chain & Transações Confirmadas na Solana",
+    "voiceover_en": "Finally, on the Audit tab, we verify confirmed Solana Devnet transactions. Our Anchor program enforces Program Derived Address custody. We see real executions of metabolize_yield.",
+    "voiceover_pt": "Finalmente, na aba Audit, verificamos transações confirmadas na Solana Devnet. Nosso programa Anchor isola custódia em PDAs. Vemos execuções reais de metabolize_yield.",
+    "file": "screenshots_narration/narration_step_12.png",
+    "ui_action": "Transição para a aba '04 Audit' e inspeção de transações on-chain com hash real.",
+    "target_element": "Transação On-Chain Confirmada: metabolize_yield"
+  },
+  {
+    "item": 13,
+    "timestamp": "2:20 - 2:32",
+    "title": "Soberania Humana & Salvaguarda emergency_withdraw",
+    "voiceover_en": "And if an agent ever misbehaves, the human owner holds the constitutional right to trigger emergency_withdraw, revoking operators and reclaiming capital.",
+    "voiceover_pt": "E se um agente falhar ou agir maliciosamente, o dono humano detém o direito constitucional de acionar emergency_withdraw, revogando operadores e recuperando o capital.",
+    "file": "screenshots_narration/narration_step_13.png",
+    "ui_action": "Destaque na soberania da 'Owner Key' sobre as chaves do operador no programa Anchor.",
+    "target_element": "Pilar de Governança: Owner Key vs. Operator Key & Emergency Controls"
+  },
+  {
+    "item": 14,
+    "timestamp": "2:32 - 2:50",
+    "title": "Epílogo: Plano de Controle Verificável na Solana & Colosseum",
+    "voiceover_en": "ValueCurator is not an abstract AI concept. It is a live, verifiable control plane on Solana. AI advises. Evidence proves. Policy authorizes. The owner governs. Thank you, and we look forward to the Colosseum Accelerator.",
+    "voiceover_pt": "O ValueCurator não é um conceito abstrato de IA. É um plano de controle vivo e verificável na Solana. IA aconselha. Evidência comprova. Política autoriza. O dono governa. Obrigado, e nos vemos no Colosseum Accelerator.",
+    "file": "screenshots_narration/narration_step_14.png",
+    "ui_action": "Encerramento triunfante da apresentação com os axiomas soberanos e chamada para a banca avaliadora.",
+    "target_element": "Painel de Conclusão: Arquitetura Verificável na Solana"
+  }
+]

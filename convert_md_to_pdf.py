@@ -79,7 +79,7 @@ def postprocess_html(html_text: str, math_blocks, math_inlines, mermaid_blocks):
     # Ensure major sections, diagrams 2 & 3, and individual test steps start on clean pages for maximum readability
     html_text = re.sub(r'<h2>(.*?[§\d].*?)</h2>', r'<h2 style="page-break-before: always; break-before: always;">\1</h2>', html_text)
     html_text = re.sub(r'<h3>(.*?[Dd]iagrama [2345].*?)</h3>', r'<h3 style="page-break-before: always; break-before: always;">\1</h3>', html_text)
-    html_text = re.sub(r'<h3>(.*?[Pp]asso \d+.*?)</h3>', r'<h3 style="page-break-before: always; break-before: always;">\1</h3>', html_text)
+    html_text = re.sub(r'<h3>(.*?(?:Passo|Item)\s*\d+.*?)</h3>', r'<h3 style="page-break-before: always; break-before: always;">\1</h3>', html_text)
 
     return html_text
 
@@ -507,6 +507,7 @@ async def convert_md_to_pdf(md_path: str, pdf_path: str, vendor_dir: str):
 
     # Markdown to HTML
     md_parser = MarkdownIt('commonmark', {'html': True}).enable('table').enable('strikethrough')
+    md_parser.validateLink = lambda url: True
     body_html = md_parser.render(pre_md)
 
     # Postprocess
