@@ -1640,3 +1640,31 @@ O documento de especificação do **ProofGate Simulator SPA** ([`PROOFGATE_SIMUL
    - Cenário de 1 clique: *"Infecção por Alimento Vencido & Toxina AMM"*.
 
 ---
+## Interação #30 — `2026-10-16T15:20:44Z`
+
+### 👤 Prompt do Usuário
+
+```text
+gere uma apresentaçao conpatível & editável no google apresentaçoes, do pitch deck, com todos os slides, utiizando formas e emojis e glifos unicode
+```
+
+### 🤖 Resposta & Entregáveis do Antigravity
+
+# 📽️ Pitch Deck Compatível & Editável no Google Slides (Google Apresentações)
+
+Foi gerada a apresentação completa do **Pitch Deck Oficial (12 Slides)** do **ValueCurator**, 100% compatível e editável no **Google Slides / Google Apresentações**, implementada no formato `.pptx` em formato widescreen 16:9 ($13.333 \times 7.5$ polegadas). Cada slide foi construído com formas geométricas nativas (`ROUNDED_RECTANGLE`), caixas de texto com quebra automática, tabelas nativas de comparação e métricas, paleta escura Obsidian com acentos em ciano, dourado e esmeralda, emojis e glifos matemáticos Unicode.
+
+* 📊 **Apresentação PPTX Editável**: [`VALUECURATOR_PITCH_DECK.pptx`](file:///home/sukata/ip-nft/VALUECURATOR_PITCH_DECK.pptx) (73 KB, 12 slides com anotações)
+* 📄 **Guia de Edição & Importação**: [`GOOGLE_SLIDES_PITCH_DECK_GUIDE.md`](file:///home/sukata/ip-nft/GOOGLE_SLIDES_PITCH_DECK_GUIDE.md)
+* 📕 **PDF do Guia**: [`GOOGLE_SLIDES_PITCH_DECK_GUIDE.pdf`](file:///home/sukata/ip-nft/GOOGLE_SLIDES_PITCH_DECK_GUIDE.pdf)
+
+#### Destaques da Apresentação no Google Slides:
+1. **Estrutura 100% Editável**:
+   - Cada texto, valor, porcentagem e forma geométrica pode ser clicado, arrastado, redimensionado e recolorido diretamente na interface web do Google Slides.
+2. **Anotações do Apresentador (Speaker Notes)**:
+   - Todos os 12 slides incluem o roteiro de locução em inglês no campo nativo de anotações, com minutagens e direções de fala para uma apresentação de 2 minutos e 50 segundos.
+3. **Formas, Emojis & Glifos**:
+   - Uso de cards visuais, badges de cabeçalho, tabelas nativas de métricas (Y1-Y3) e matriz competitiva de 5 colunas.
+   - Glifos matemáticos e simbólicos integrados: $\mathcal{VC}$, $\mathbb{P}_{\text{ruin}}$, $\bigwedge \mathcal{C}_k$, 🏛️, 💎, 🌟, ⚡, 🛡️, 🦀, 🏦, 🔬, 📊.
+
+---
