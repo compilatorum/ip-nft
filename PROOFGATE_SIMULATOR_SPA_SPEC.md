@@ -704,3 +704,240 @@ proofgate-simulator-spa/
 
 * 🌐 **Repositório Oficial**: [https://github.com/compilatorum/vc](https://github.com/compilatorum/vc)  
 * ⚡ **Programa na Solana Devnet**: [`6owAcXQjGg6d5p1n2D5gK8mKkG9uH9sE1kL2mP3rMiW5`](https://explorer.solana.com/address/6owAcXQjGg6d5p1n2D5gK8mKkG9uH9sE1kL2mP3rMiW5?cluster=devnet)
+
+
+---
+
+# 🩺 §8. A Epistemologia da Saúde Financeira: O ProofGate / ValueCurator como Inspetor Sanitário do Capital
+
+> *Adendo Append-Only: Integração da Hermenêutica de Vigilância Sanitária, Assepsia de Dados e Profilaxia Fiduciária na Arquitetura do Simulador SPA.*
+
+---
+
+## 🧬 8.1. Filosofemas da Assepsia Fiduciária & Vigilância Sanitária
+
+* 🜁 **Filosofema da Profilaxia vs. Necropsia Fiduciária (*The Preventive Hygiene Principle*)**:
+  > *«No mercado financeiro descentralizado, a maioria dos protocolos atua como médicos legistas: chegam após a exploração, analisam os destroços da drenagem de tesouraria e redigem um post-mortem melancólico no Twitter/X. O ProofGate / ValueCurator rejeita a medicina post-mortem. Ele opera como a Vigilância Sanitária do Capital: inspeciona as cozinhas de liquidez, avalia o prazo de validade das cotações, mede o grau de contaminação estocástica e interdita sumariamente qualquer prato antes que ele seja servido ao estômago do cofre. Se o ingrediente não possui laudo bromatológico irrefutável, a cozinha fecha.»*
+
+* 🜂 **Filosofema da Pureza do Ingrediente (*The Epistemic Pure-Food Doctrine*)**:
+  > *«Um modelo de inteligência artificial probabilístico é como um autômato esfomeado: se você colocar na sua frente carne estragada (cotação defasada da DEX) ou cogumelos venenosos (pool desbalanceado por flash loan), ele irá consumir e executar o swap porque enxerga um padrão de 'oportunidade'. O ProofGate atua como o Inspetor Sanitário que barra o caminhão na porta da despensa: ele não discute com a fome do autômato; ele confisca o ingrediente tóxico com base em normas objetivas de assepsia.»*
+
+* 🜃 **Filosofema da Quarentena Fail-Closed (*Deliberate Quarantine*)**:
+  > *«Uma autoridade sanitária séria não precisa de consenso democrático ou negociação para interditar um restaurante que viola a cadeia de frio. A interdição é um dever cautelar, imediato e unilateral. No ValueCurator, o Fail-Closed é o ato de lavrar o auto de infração e lacrar o estabelecimento: a carteira não gasta um único centavo de gás, a chave privada permanece fria na despensa blindada do PDA, e o proprietário recebe um laudo de contaminação evitada.»*
+
+---
+
+## 🔣 8.2. Formalismo Simbólico da Higiene e Saúde Fiduciária
+
+O estado de **Saúde Fiduciária** ($\mathcal{H}_{\text{health}}$) de um nó do ValueCurator em um instante $t$ é formalizado como uma métrica escalar normalizada no intervalo $[0, 1]$:
+
+$$\mathcal{H}_{\text{health}}(t) = w_{\text{fresh}} \cdot \Phi_{\text{fresh}}(t) + w_{\text{purity}} \cdot \Psi_{\text{purity}}(t) + w_{\text{immunity}} \cdot \Omega_{\text{immunity}}(t) + w_{\text{solvency}} \cdot \Sigma_{\text{solvency}}(t)$$
+
+Onde a soma dos pesos satisfaz $\sum w_i = 1$, e as funções clínicas de conformidade são:
+
+$$\begin{cases}
+\Phi_{\text{fresh}}(t) & = \max\left(0, \, 1 - \frac{\Delta t_{\text{age}}(t)}{\tau_{\text{age}}^{\max}}\right) \quad \text{[Índice de Frescor do Alimento Oracular]} \\
+\Psi_{\text{purity}}(t) & = \max\left(0, \, 1 - \frac{\sigma_{\text{conf}}(t)}{p_{\text{pyth}}(t) \cdot \sigma_{\text{conf}}^{\max}}\right) \quad \text{[Índice de Pureza Bromatológica / Ausência de Ruído]} \\
+\Omega_{\text{immunity}}(t) & = \max\left(0, \, 1 - \frac{\big| p_{\text{dex}}(t) - p_{\text{pyth}}(t) \big|}{p_{\text{pyth}}(t) \cdot \Delta_{\text{dev}}^{\max}}\right) \quad \text{[Índice de Imunidade a Patógenos de Liquidez]} \\
+\Sigma_{\text{solvency}}(t) & = \frac{S_{\text{vault}}(t) - V_{\text{cum}}(t)}{S_{\text{vault}}(t)} \quad \text{[Índice de Pressão Hemodinâmica de Volume]}
+\end{cases}$$
+
+O operador de **Vigilância Sanitária** $(\mathcal{I}_{\text{sanitary}})$ atua como a função de interdição cautelar:
+
+$$\mathcal{I}_{\text{sanitary}}(\mathcal{M}, \vec{\Xi}, \theta) \vdash \begin{cases}
+\mathbf{ALVAR\acute{A}\_SANIT\acute{A}RIO}(\Pi_{\text{auth}}) & \iff \mathcal{H}_{\text{health}}(t) \ge \Theta_{\text{sanitary}}^{\min} \land \bigwedge_{k=1}^6 \mathcal{C}_k \equiv \mathbf{true} \\
+\mathbf{INTERDI\C{C}\tilde{A}O\_CAUTELAR}(\vec{\rho}_{\text{toxins}}) & \iff \mathcal{H}_{\text{health}}(t) < \Theta_{\text{sanitary}}^{\min} \lor \bigvee_{k=1}^6 \neg \mathcal{C}_k \equiv \mathbf{true}
+\end{cases}$$
+
+Onde $\vec{\rho}_{\text{toxins}}$ descreve o espectro de contaminação detectado:
+
+$$\vec{\rho}_{\text{toxins}} \subset \big\{ \mathtt{TOXIN\_SPOILED\_ORACLE}, \, \mathtt{TOXIN\_AMM\_MANIPULATION}, \, \mathtt{TOXIN\_VOLUME\_HEMORRHAGE}, \, \mathtt{TOXIN\_SLIPPAGE\_SEPSIS} \big\}$$
+
+---
+
+## 📊 8.3. Diagramas Mermaid: A Esteira de Vigilância Sanitária
+
+### 🔬 Diagrama 5: A Linha de Inspeção Sanitária do Capital
+
+```mermaid
+flowchart TD
+    subgraph RawIngredients["🥦 1. INSUMOS BRUTOS DE MERCADO (CARGA EXTERNA)"]
+        RawPyth["Oráculo Pyth Feed 922<br/>(Timestamp, Preço, Spread de Confiança)"]
+        RawDex["Rota Jupiter DEX v6<br/>(Preço Implícito, Profundidade, Taxa)"]
+        RawAgent["Proposta do Agente IA<br/>(Alocação, Direção, Mint Alvo)"]
+    end
+
+    subgraph SanitaryInspection["🩺 2. BANCADA DO INSPETOR SANITÁRIO (PROOFGATE)"]
+        direction TB
+        Test1["🧪 Teste de Validade:<br/>O dado expirou? (Idade > 300s)"]
+        Test2["🧪 Teste de Pureza:<br/>Ruído/Confiança excede 1.000 bps?"]
+        Test3["🧪 Teste de Toxicidade:<br/>Desvio AMM > 20% (Flash Loan)?"]
+        Test4["🧪 Teste de Sobrecarga:<br/>Volume estoura o limite diário?"]
+        
+        Test1 --> Test2 --> Test3 --> Test4
+    end
+
+    subgraph Diagnosis["⚖️ 3. LAUDO & DELIBERAÇÃO SANITÁRIA"]
+        direction TB
+        Safe{"Todos os Laudos<br/>100% Limpos?"}
+        Alvara["🟢 EMISSÃO DE ALVARÁ SANITÁRIO<br/>Recibo Ed25519 Assinado com Carimbo de Pureza"]
+        Interdict["🔴 AUTO DE INTERDIÇÃO IMEDIATA<br/>Fail-Closed: Bloqueio Total & Quarentena Cautelar"]
+        Safe -- "SIM" --> Alvara
+        Safe -- "NÃO" --> Interdict
+    end
+
+    subgraph KitchenVault["🏦 4. A COZINHA BLINDADA (SOLANA PDA VAULT)"]
+        Kitchen["Cofre PDA (Cold Pantry)<br/>Program ID: 6owAcX...MiW5"]
+        Metabolize["metabolize_yield Executado<br/>Capital Nutrido com Segurança"]
+        Locked["Portas Lacradas<br/>Zero Contaminação de Liquidez"]
+    end
+
+    RawIngredients ==> SanitaryInspection
+    SanitaryInspection ==> Diagnosis
+    Alvara ==> Kitchen ==> Metabolize
+    Interdict ==> Kitchen ==> Locked
+
+    style RawIngredients fill:#1e293b,stroke:#94a3b8,stroke-width:2px,color:#fff
+    style SanitaryInspection fill:#1e3a5f,stroke:#60a5fa,stroke-width:2px,color:#fff
+    style Diagnosis fill:#4c1d95,stroke:#a78bfa,stroke-width:2px,color:#fff
+    style KitchenVault fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#fff
+    style Interdict fill:#7f1d1d,stroke:#f87171,stroke-width:2px,color:#fff
+    style Alvara fill:#065f46,stroke:#10b981,stroke-width:2px,color:#fff
+```
+
+---
+
+### 🏥 Diagrama 6: O Ciclo de Profilaxia, Quarentena e Descontaminação
+
+```mermaid
+stateDiagram-v2
+    [*] --> EstadoSaudavel: Mandato Calibrado pelo Dono
+
+    state EstadoSaudavel {
+        [*] --> MonitoramentoContinuo
+        MonitoramentoContinuo --> InspecaoDeIngredientes: Nova Cotação Recebida
+        InspecaoDeIngredientes --> AssepsiaConfirmada: Invariantes C1-C6 Verificados
+        AssepsiaConfirmada --> EmissaoDeAlvara: Recibo Ed25519 Gerado
+        EmissaoDeAlvara --> ExecucaoMetabolica: metabolize_yield no Anchor
+        ExecucaoMetabolica --> MonitoramentoContinuo
+    }
+
+    EstadoSaudavel --> EstadoDeQuarentena: Detecção de Patógeno (Oráculo Vencido ou Desvio > 20%)
+
+    state EstadoDeQuarentena {
+        [*] --> InterdicaoCautelar
+        InterdicaoCautelar --> CongelamentoFailClosed: Nenhuma Transação Assinada
+        CongelamentoFailClosed --> TelemetriaDeAlerta: Alerta Clínico Enviado ao Dono
+        TelemetriaDeAlerta --> AguardandoExpurgo: Mercado Dissipa Distorção
+        AguardandoExpurgo --> TesteDeDescontaminacao: Nova Evidência Sadia Chega
+    }
+
+    EstadoDeQuarentena --> EstadoSaudavel: Descontaminação Comprovada (Pyth Fresco & Preço Alinhado)
+    EstadoDeQuarentena --> SaqueDeEmergencia: Dono Exerce Soberania Absoluta (emergency_withdraw)
+    SaqueDeEmergencia --> [*]: Capital Retirado para Cold Wallet
+```
+
+---
+
+## 🎛️ 8.4. Módulo UI "Sanitary Health Cockpit" na SPA
+
+Para materializar essa visão na interface do simulador, a **Coluna Direita (Outputs)** e o **Header Superior** incorporam componentes explícitos de **Vigilância Sanitária Fiduciária**:
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│  🩺 VIGILÂNCIA SANITÁRIA FIDUCIÁRIA  │  Índice de Saúde: 98.4% (EXCELENTE)  │  Status: ALVARÁ VIGENTE  │ CU: 18k  │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 🧪 PAINEL CLÍNICO DE ASSEPSIA (SANITY & HYGIENE MONITOR)                                                      │
+│                                                                                                                │
+│ 1. ⏱️ CRONÔMETRO DE VALIDADE DO ALIMENTO ORACULAR (PYTH FRESHNESS CLOCK):                                    │
+│    [████████████████████████████████████████░░░░░░░░] 12s decorridos / Máximo 300s (FRESH & SAFE)             │
+│    *Status: DADO FRESCO. Zona de decomposição inicia em 288s.*                                                 │
+│                                                                                                                │
+│ 2. 🔬 TERMÔMETRO DE TOXINAS DE MERCADO (AMM DISLOCATION & SLIPPAGE):                                          │
+│    Nível de Contaminação: [ 0.8% ] ──o─────────────────────── [ Limiar de Interdição: 20.0% ]                 │
+│    *Diagnóstico: Água limpa. Sem sinais de envenenamento por Flash-Loans nas rotas da Jupiter.*                │
+│                                                                                                                │
+│ 3. 🧬 HEMOGRAMA FIDUCIÁRIO DO COFRE (VAULT VITAL SIGNS):                                                      │
+│    • Pressão Volumétrica:       100 USDC / 1.000 USDC diários (10.0% da capacidade - ESTÁVEL)                 │
+│    • Pureza Bromatológica:      Confiança Pyth em +/- $0.45 (0.3% de incerteza - NÍVEL HOSPITALAR)             │
+│    • Integridade da Despensa:   PDA Solana Anchor (6owAcX...MiW5) Intacto e Auditável                          │
+│                                                                                                                │
+│ 4. 📜 ALVARÁ SANITÁRIO DE EXECUÇÃO (ED25519 CRYPTOGRAPHIC SANITARY PERMIT):                                   │
+│    ┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐    │
+│    │  AUTORIDADE EMISSORA: ProofGate Fiduciary Sanitation Engine v1.0                                      │    │
+│    │  OBJETO: Autorização para Swap de 100 USDC em AAPLx via Jupiter v6                                    │    │
+│    │  LAUDO: 6 Invariantes Analisados. Índice de Pureza: 0.984. Zero Patógenos Detectados.                 │    │
+│    │  ASSINATURA DIGITAL: 3b9e4a71f0c29d18e8a7bc901ef546a1... (Ed25519 Verified)                          │    │
+│    │  VALIDADE: Bloco Solana #328,190,402 (Expira em 400ms se não minerado)                               │    │
+│    └──────────────────────────────────────────────────────────────────────────────────────────────────────┘    │
+│                                                                                                                │
+│ 🚨 AÇÕES DO INSPETOR EM CASO DE CONTAMINAÇÃO:                                                                  │
+│ [ 🚫 SIMULAR AUTO DE INTERDIÇÃO ]   [ 🧪 INJETAR TOXINA ORACULAR (STALE) ]   [ 🏥 PROTOCOLO DESCONTAMINAÇÃO ] │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 💻 8.5. Especificações de Tipagem TypeScript para o Subsistema Sanitário
+
+Modelos de dados adicionados ao `src/types/simulator.ts`:
+
+```typescript
+// src/types/sanitary.ts
+
+export type HealthGrade = 'PRISTINE' | 'ADEQUATE' | 'CONTAMINATED' | 'INTERDICTED';
+
+export interface DataToxinIndicator {
+  toxinId: 'SPOILED_TIMESTAMP' | 'CONFIDENCE_HAZE' | 'AMM_SKEW' | 'SLIPPAGE_SEPSIS' | 'DRAIN_FEVER';
+  severity: 'BENIGN' | 'MILD' | 'CRITICAL' | 'LETHAL';
+  measuredValue: number;
+  safetyThreshold: number;
+  clinicalDescription: string;
+}
+
+export interface FiduciarySanitaryReport {
+  timestamp: number;
+  healthIndexScore: number;          // 0.000 a 1.000 (ex: 0.984 = 98.4%)
+  healthGrade: HealthGrade;
+  purityFreshnessRatio: number;      // 1.0 = colhido agora; 0.0 = podre
+  contaminationSpreadBps: number;    // bps de incerteza oracular
+  activeToxins: DataToxinIndicator[];
+  sanitaryPermitEmitted: boolean;
+  permitCertificate?: {
+    permitId: string;
+    inspectorSignature: string;      // Ed25519 signature
+    inspectedMint: string;
+    inspectedVolumeUsdc: number;
+    blockHeightExpires: number;
+    quarantineOverrideAvailable: boolean;
+  };
+  interdictionNotice?: {
+    noticeId: string;
+    violatedRegulation: string;      // ex: "Artigo C3: Proibido consumo de cotações com idade > 300s"
+    quarantineState: 'LOCKED_FAIL_CLOSED' | 'OWNER_INTERVENTION_REQUIRED';
+    lossAvertedEstimatedUsdc: number;
+  };
+}
+```
+
+---
+
+## 🧪 8.6. Cenário de Testbench Sanitário: "Infecção por Alimento Vencido"
+
+Na interface da SPA, ao selecionar o cenário **"Choque Sanitário: Alimento Vencido & Toxina AMM"**:
+
+1. **Injeção do Choque**:
+   * O oráculo Pyth tem seu relógio congelado a $340$ segundos atrás (alimento vencido há mais de 5 minutos).
+   * A Jupiter simula um pool manipulado com preço $23.3\%$ acima da referência (toxina bacteriana de flash loan).
+2. **Reação do Inspetor Sanitário (ProofGate)**:
+   * O **Índice de Saúde** cai de $98.4\%$ para $12.1\%$ (`INTERDICTED`).
+   * O componente de **Cronômetro de Validade** fica vermelho pulsante com o aviso: `ALIMENTO VENCIDO (DECAY: 340s > 300s)`.
+   * O **Termômetro de Toxinas** salta para a faixa crítica com o diagnóstico: `CONTAMINAÇÃO DETECTADA: DESVIO DE 2.333 BPS (LIMIAR: 2.000 BPS)`.
+   * O botão de execução on-chain é desativado e substituído pelo **Selo de Interdição Cautelar**.
+   * O emulador do Anchor exibe a rejeição no nível de instrução: `Program failed to complete: Invariant C3 breached. Fail-Closed quarantine active`.
+   * **Resultado Fiduciário**: Nenhum satoshi ou microlamport foi perdido. A saúde do capital foi preservada por profilaxia preventiva.
+
+---
+
+### 🌟 Axioma Sanitário de Fechamento
+> ### *"Em finanças autônomas, a melhor vacina contra a falência é o auto de interdição determinístico do Inspetor Sanitário."*
