@@ -1782,3 +1782,54 @@ Foi elaborado um memorando institucional e analítico completo adaptando o proce
 * **Veredito do Comitê de Investimento**: Aprovação unânime de alocação de capital na rodada Seed.
 
 ---
+
+---
+## Interação #34 — `2026-10-16T18:14:00Z`
+
+### 👤 Prompt do Usuário
+
+```text
+faça uma segunda versao , focada em B2C , para organizar um micro fundo pessoal, one-person business, "pé-de-meia" etc. adapte do documento anterior e a seguinte entrevista : "a entrevista que está lá está com este conteudo:
+A entrevista fixa dez perguntas, nesta ordem, no protocolo customer-discovery-v2. O texto abaixo é o que o programa pergunta, em inglês. Uma assinatura da carteira identifica quem responde. Essa assinatura não autoriza transação nenhuma.
+
+Consentimento. Do you consent to participate in this research interview and to have your responses stored for product research?
+Contexto. What do you operate today: a business that allocates capital, an agent or runtime that proposes financial actions, or both? Describe the last time that system was involved in a financial action.
+Autonomia. In the last month, which financial actions went ahead without a person approving each one?
+Controles atuais. What check stopped or allowed that action before any funds moved?
+Risco. Describe the last time you refused an automated financial action. What made you refuse?
+Autorização. Who is allowed to approve an action in your organization, and which limit did they apply last time?
+Auditoria. After the last allowed or blocked action, what record did you keep, and who read it?
+Fazer ou comprar. Which of those controls does your team run itself, and which do you pay another party to provide?
+Encaixe do ValueCurator. ValueCurator keeps AI advice separate from deterministic authorization and from custody. Where, if anywhere, would that sit in the workflow you described?
+Interesse no piloto. Would you test this in shadow mode, where the decision is recorded and no capital moves? Reply yes or no, and name who else would have to agree.
+O modelo pode ajustar a redação de um acompanhamento. Não pode pular essas dez. Não há um segundo roteiro de perguntas gravado no repositório."
+```
+
+### 🤖 Resposta & Entregáveis do Antigravity
+
+# 🏛️ Tese de Investimento Empírica por Simulação — Versão B2C: O Micro-Fundo Pessoal, One-Person Business & "Pé-de-Meia" Soberano
+
+Foi elaborado um memorando de investimento focado no segmento **B2C / Prosumers / One-Person Business**, adaptando a metodologia empírica para o caso de uso de **micro-fundos pessoais e poupança soberana ("pé-de-meia")**. O documento integra com rigor estrito o roteiro oficial de dez perguntas do protocolo **`customer-discovery-v2`** com identificação criptográfica via assinatura de carteira (Sign-In with Solana - SIWS), sem autorização de transação, acoplando cada resposta da persona a uma **simulação matemática de bancada** da planilha e do simulador.
+
+* 📄 **Documento Estratégico em Markdown**: [`EMPIRICAL_INVESTMENT_THESIS_B2C_MICROFUND_PEDEMEIA.md`](file:///home/sukata/ip-nft/EMPIRICAL_INVESTMENT_THESIS_B2C_MICROFUND_PEDEMEIA.md)
+* 📕 **Compilado Vetorial em PDF**: [`EMPIRICAL_INVESTMENT_THESIS_B2C_MICROFUND_PEDEMEIA.pdf`](file:///home/sukata/ip-nft/EMPIRICAL_INVESTMENT_THESIS_B2C_MICROFUND_PEDEMEIA.pdf) *(968 KB, com 3 equações MathJax display, 74 equações inline, tabelas e 3 diagramas Mermaid renderizados)*
+
+#### As 10 Perguntas do `customer-discovery-v2` Acopladas às Simulações:
+1. **Consentimento (Consent)**: Assinatura não-transacional Ed25519; ativação do nó de pesquisa na aba `0_Intro_&_Arquitetura`.
+2. **Contexto (Context)**: Gestão de caixa operacional ($5k a $25k USDC) de One-Person Business $\leftrightarrow$ *Aba 5: Segmentação de capital de giro vs. reserva de rendimento*.
+3. **Autonomia (Autonomy)**: Medo paralisante de sobre-negociação (*over-trading*) por bots sem controle $\leftrightarrow$ *Testbench Playwright: Mandato passivo limitando frequência a 1 rebalanceamento/24h*.
+4. **Controles Atuais (Current Controls)**: Apenas os olhos do usuário no popup da carteira $\leftrightarrow$ *Aba 3: Teto diário objetivo ($\lambda_{\text{daily}} \le \$150$) agindo como freio emocional contra FOMO*.
+5. **Risco (Risk)**: Recusa de pool raso com desvio de 8% $\leftrightarrow$ *Aba 2: Rejeição automática `FAIL-CLOSED (REJECTED_AMM_DISLOCATION)` poupando $189,18 USDC sem supervisão humana*.
+6. **Autorização (Authorization)**: Apenas o fundador aprova com limites mentais frágeis $\leftrightarrow$ *Contratos Anchor: Segregação criptográfica entre `owner_authority` (dono) e `operator_authority` (agente de IA)*.
+7. **Auditoria (Audit)**: Planilha manual reativa para impostos $\leftrightarrow$ *Aba 6: Recibo criptográfico Ed25519 por operação e Painel de Inspeção Sanitária ($\mathcal{H}_{\text{health}} = 93,2\%$)*.
+8. **Fazer ou Comprar (Build vs. Buy)**: Impossibilidade de construir infraestrutura de risco própria $\leftrightarrow$ *Aba 4: Modelo SaaS de $1 USDC/mês reduz custos em >88% frente a robôs de investimento tradicionais*.
+9. **Encaixe do ValueCurator (ValueCurator Fit)**: Preenchimento do vazio entre ideias e execução on-chain $\leftrightarrow$ *Simulador SPA: Fluxo tripartite onde falhas de IA deixam o cofre estritamente seguro (*fail-closed*)*.
+10. **Interesse no Piloto (Pilot Interest)**: Aceitação imediata de teste em Modo Sombra (*Shadow Mode*) $\leftrightarrow$ *Aba 7: 30 dias de telemetria sem falsos positivos e 100% de bloqueios fiduciários*.
+
+#### Síntese da Tese de Investimento B2C:
+* **Mercado**: TAM de $45B (500M de freelancers e solopreneurs), SAM de $6.2B (stablecoins em carteiras ativas Solana) e SOM trienal de $420M.
+* **Unit Economics**: SaaS microrrecorrente de $1 USDC/mês + 15 bps sobre yield; Margem Bruta de $96,2\%$; Payback do CAC em menos de 1 mês; LTV/CAC superior a $63\times$; Churn previsto $< 0,5\%$/mês.
+* **Projeção B2C Trienal**: Ano 1: 10.000 cofres ($146k ARR) $\to$ Ano 2: 100.000 cofres ($1.59M ARR) $\to$ Ano 3: 750.000 cofres ($13.09M ARR).
+* **Retorno da Aceleradora Colosseum**: Múltiplo projetado de **$41.6\times$ (MOIC)** para a cota Seed de $250.000 USDC.
+
+---
