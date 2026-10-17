@@ -1,0 +1,4 @@
+RunID,SimSuccess,TxSignatureSimulated,ProgramLogs,ErrorCode,ComputeUnits
+RUN_0001,FALSE,,"Program failed to complete: Invariant C3 breached. Fail-Closed quarantine active",ERR_STALE_ORACLE,18420
+RUN_0002,TRUE,SIMSIG_0002,"Program log: Invariants Verified; Yield Metabolized",,18420
+RUN_0003,FALSE,SIMSIG_0003,"Program failed: Owner signature missing; Invariant C2 breached",ERR_VOLUME_EXCEEDED,30000

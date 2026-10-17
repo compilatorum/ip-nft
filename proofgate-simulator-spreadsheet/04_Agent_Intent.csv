@@ -1,0 +1,3 @@
+IntentID,AgentId,AmountInUsdc,MinAmountOut,CumulativeDailyVolumeUsdc,Direction,StrategyTag,TargetMint,Notes
+INT_0001,AGENT_KAIROS,100,99,0,BUY,KAIROS_MOMENTUM_PIML_V1,AAPLx,"Default safe intent"
+INT_0002,AGENT_ATTACKER,50000,49500,0,SELL,MALICIOUS_DRAIN_V1,AAPLx,"Attack: large amount to exceed daily cap"

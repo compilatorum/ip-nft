@@ -1,0 +1,4 @@
+EvidenceID,TargetMint,PythPriceUsd,PythConfidenceUsd,PythTimestamp,JupiterImpliedPriceUsd,PriceImpactBps,CurrentObsTimestamp,SimulatedShock,MagnitudePercent,Notes,OracleAgeSeconds,DivergenceBps,ConfidenceSpreadBps
+EVID_0001,AAPLx,152.00,0.45,1700000000,91.20,120,1700000340,FLASH_CRASH,40,"Flash crash + oracle stale",340,4000,29.6052631578947
+EVID_0002,AAPLx,152.00,0.50,1700001000,187.50,200,1700001233,DEX_DRAIN,23.3,"AMM dislocation (flash-loan)",233,2335,32.8947368421053
+EVID_0003,AAPLx,152.00,0.46,1700002000,152.15,8,1700002012,NONE,0,"Safe nominal observation",12,1,30.2631578947368

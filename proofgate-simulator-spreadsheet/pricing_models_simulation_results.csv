@@ -1,0 +1,4 @@
+Scenario,StartAUM,MonthlyDeposit,MonthlyReturnPct,Months,EndAUM,TotalDeposits,Profit,AvgAUM,AUMFeeAnnualPct,AUMFeeRevenue,DepositFeePerDeposit,NumDeposits,DepositFeeRevenue,PerfFeePct,PerformanceFeeRevenue
+Conservative,100000,1000,0.2,12,114507,12000,507,107253,0.25,268.13,1,12,12,20,101.40
+Balanced,500000,5000,0.8,12,613603,60000,53602.5,556801.5,0.25,1392.00,1,12,12,20,10720.50
+Aggressive,200000,10000,2.0,12,387768,120000,67768,293884,0.25,734.71,1,12,12,20,13553.60
