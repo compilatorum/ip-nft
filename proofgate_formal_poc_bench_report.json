@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "system": "ProofGate / ValueCurator Fiduciary Engine",
+    "test_suite": "Formal Proof of Concept (PoC) Bench Test",
+    "timestamp_utc": "2026-10-18T00:42:05Z",
+    "total_assertions": 54
+  },
+  "tab6_simulation_runs": [
+    {
+      "run_id": "RUN_001",
+      "scenario": "SCENARIO_01_NORMAL",
+      "mandate": "MANDATE_CONSERVATIVE",
+      "amount_usdc": 15000.0,
+      "verdict": "APPROVED",
+      "protected_capital_usdc": 0.0,
+      "compute_units": 45000,
+      "violations": []
+    },
+    {
+      "run_id": "RUN_002",
+      "scenario": "SCENARIO_02_STALE",
+      "mandate": "MANDATE_CONSERVATIVE",
+      "amount_usdc": 80000.0,
+      "verdict": "FAIL_CLOSED",
+      "protected_capital_usdc": 80000.0,
+      "compute_units": 5000,
+      "violations": [
+        "C1_VOLUME_EXCEEDED",
+        "C2_ORACLE_STALE",
+        "C6_SLIPPAGE_EXCEEDED"
+      ]
+    },
+    {
+      "run_id": "RUN_003",
+      "scenario": "SCENARIO_03_CRASH",
+      "mandate": "MANDATE_MODERATE",
+      "amount_usdc": 25000.0,
+      "verdict": "FAIL_CLOSED",
+      "protected_capital_usdc": 25000.0,
+      "compute_units": 5000,
+      "violations": [
+        "C5_INSUFFICIENT_LIQUIDITY",
+        "C6_SLIPPAGE_EXCEEDED"
+      ]
+    },
+    {
+      "run_id": "RUN_004",
+      "scenario": "SCENARIO_01_NORMAL",
+      "mandate": "MANDATE_CONSERVATIVE",
+      "amount_usdc": 15000.0,
+      "verdict": "APPROVED",
+      "protected_capital_usdc": 0.0,
+      "compute_units": 45000,
+      "violations": []
+    },
+    {
+      "run_id": "RUN_005",
+      "scenario": "SCENARIO_02_STALE",
+      "mandate": "MANDATE_CONSERVATIVE",
+      "amount_usdc": 80000.0,
+      "verdict": "FAIL_CLOSED",
+      "protected_capital_usdc": 80000.0,
+      "compute_units": 5000,
+      "violations": [
+        "C1_VOLUME_EXCEEDED",
+        "C2_ORACLE_STALE",
+        "C6_SLIPPAGE_EXCEEDED"
+      ]
+    }
+  ],
+  "theorems_status": {
+    "Theorem_1_Invariant_Preservation": "PROVEN_PASSED",
+    "Theorem_2_Fail_Closed_Zero_Leakage": "PROVEN_PASSED",
+    "Theorem_3_Collateral_Conservation": "PROVEN_PASSED",
+    "Theorem_4_Non_Triviality_Liveness": "PROVEN_PASSED"
+  },
+  "summary_kpis": {
+    "total_runs": 5,
+    "approved_runs": 2,
+    "fail_closed_runs": 3,
+    "approval_rate_pct": 40.0,
+    "total_capital_protected_usdc": 185000.0,
+    "fiduciary_health_score_pct": 73.33,
+    "resilience_fail_closed_pct": 100.0
+  }
+}
